@@ -4,9 +4,13 @@
     justify-content: space-between;
     gap:10px;
     padding:20px;
+    width: 100%;
+}
+.img-container{
+    width: 30%;
 }
 .allCards img{
-    width: 100px;
+    width: 100%;
     filter:grayscale(100%);
     transition:.3s ease;
 }
@@ -15,21 +19,21 @@
     filter: grayscale(0%);
 }
 .supports{
-    padding:20px;
+    padding:2rem;
     font-size: 1.4rem;
 }
 .support_text{
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
 }
 .supports img{
-    width:40px;
+    width:4rem;
 }
 .msg,.mail{
     display: flex;
     align-items: center;
     gap: 10px;
     margin-top: 8px;
-    padding:10px;
+    padding:1rem;
     background-color:#f4f4f4 ;
     border-radius: 8px;
 }

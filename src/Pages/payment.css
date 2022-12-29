@@ -92,10 +92,11 @@ footer{
     justify-content: center;
     align-items: center;
     margin: 0px auto;
-    padding:20px 0px;
+    padding:2rem 1rem;
+    text-align: center;
 }
 footer img{
-    width: 200px;
+    width: 20rem;
 }
 footer p{
     color:white;
@@ -134,6 +135,6 @@ footer p{
         max-width: 540px;
     }
     .card{
-        width: 85%;
+        width: 90%;
     }
 }

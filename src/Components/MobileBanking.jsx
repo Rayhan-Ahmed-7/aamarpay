@@ -9,12 +9,12 @@ const MobileBanking = () => {
     
     return (
         <div className='allCards'>
-            <img src={bkash} alt="bkash" />
-            <img src={roket} alt="roket" />
-            <img src={nagad} alt="nagad" />
-            <img src={wallet} alt="ok wallet" />
-            <img src={upay} alt="upay" />
-            <img src={tap} alt="tap" />
+            <div className='img-container'><img src={bkash} alt="bkash" /></div>
+            <div className='img-container'><img src={roket} alt="roket" /></div>
+            <div className='img-container'><img src={nagad} alt="nagad" /></div>
+            <div className='img-container'><img src={wallet} alt="ok wallet" /></div>
+            <div className='img-container'><img src={upay} alt="upay" /></div>
+            <div className='img-container'><img src={tap} alt="tap" /></div>
         </div>
     );
 };

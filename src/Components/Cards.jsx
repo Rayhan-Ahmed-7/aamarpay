@@ -7,10 +7,10 @@ import './cards.css';
 const Cards = () => {
     return (
         <div className='allCards'>
-            <img src={nexus} alt="nexus" />
-            <img src={master} alt="master" />
-            <img src={visa} alt="visa" />
-            <img src={qcash} alt="qcash" />
+            <div className='img-container'><img src={nexus} alt="nexus" /></div>
+            <div className='img-container'><img src={master} alt="master" /></div>
+            <div className='img-container'><img src={visa} alt="visa" /></div>
+            <div className='img-container'><img src={qcash} alt="qcash" /></div>
         </div>
     );
 };
