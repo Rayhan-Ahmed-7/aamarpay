@@ -18,17 +18,16 @@
 .expandable-content{
     background-color: white;
     border: 1px solid #e3e3e3;
-    padding: 10px 20px;
-    box-sizing: border-box;
-    max-height: 500px;
-    visibility: visible;
-    transition:max-height .4s ease;
+    max-height: 0;
     overflow: hidden;
+    transition:max-height .4s ease;
+    box-sizing: padding-box;
+}
+.expandable-content p{
+    padding: 10px 20px;
 }
 
-.expandable-content.hidden{
-    padding: 0;
-    max-height: 0px;
-    visibility: hidden;
+.block{
+    max-height: 500px;
     transition:max-height .4s ease;
 }
