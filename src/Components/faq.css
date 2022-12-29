@@ -1,0 +1,34 @@
+.faqs{
+    padding:20px;
+    text-align: left;
+    font-size: 1.4rem;
+}
+.faq-item{
+    width: 100%;
+    margin:10px 0;
+}
+.faq-item button{
+    width: 100%;
+    text-align: left;
+    padding: 15px 20px;
+    border: 1px solid #e3e3e3;
+    border-radius: 6px 6px 0px 0px;
+    font-size: 1.6rem;
+}
+.expandable-content{
+    background-color: white;
+    border: 1px solid #e3e3e3;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    max-height: 500px;
+    visibility: visible;
+    transition:max-height .4s ease;
+    overflow: hidden;
+}
+
+.expandable-content.hidden{
+    padding: 0;
+    max-height: 0px;
+    visibility: hidden;
+    transition:max-height .4s ease;
+}
