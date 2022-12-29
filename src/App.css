@@ -4,8 +4,11 @@
     padding:0px;
     box-sizing: border-box;
 }
+body{
+    background-color:#010713;
+}
 .App{
-    
+    height: 100%;
     font-family: 'Poppins',sans-serif;
 }
 .container{

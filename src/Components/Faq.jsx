@@ -8,7 +8,7 @@ const Faq = ({ translate }) => {
     return (
         <div className='faqs'>
             <div className="faq-item" onClick={()=>setExpand(expand != 1 ? 1:0)}>
-                <button className="qus" >
+                <button className={expand == 1 ? "active":"qus"}>
                     {!translate && <p>Is my transaction safe over online?</p>}
                     {translate && <p>আমার অনলাইন লেনদেন কি নিরাপদ আমার পে'র সাথে ?</p>}
                 </button>
@@ -18,7 +18,7 @@ const Faq = ({ translate }) => {
                 </div>
             </div>
             <div className="faq-item" onClick={()=>setExpand(expand !=2 ? 2:0)}>
-                <button className="qus" >
+                <button className={expand == 2 ? "active":"qus"}>
                     {!translate && <p>Is Debit & Credit Card Allowed over aamarPay ?</p>}
                     {translate && <p>আমার পে কি ডেবিট এবং ক্রেডিট কার্ড গ্রহণ করে?</p>}
                 </button>
@@ -28,7 +28,7 @@ const Faq = ({ translate }) => {
                 </div>
             </div>
             <div className="faq-item" onClick={()=>setExpand(expand !=3 ? 3:0)}>
-                <button className="qus" >
+                <button className={expand == 3 ? "active":"qus"}>
                     {!translate && <p>I'm doing first transaction over online! Could you please help !</p>}
                     {translate && <p>আমি অনলাইনে প্রথম লেনদেন করছি ! আপনাদের সহযোগিতা কি পাওয়া যাবে এই ক্ষেত্রে?</p>}
                 </button>

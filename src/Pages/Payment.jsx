@@ -11,7 +11,6 @@ import { useState } from 'react';
 const Payment = ({translate,setTranslate}) => {
     return (
         <div className="main">
-            <div className="particle"></div>
             <div className='payment'>
                 <div className="card_container">
                     <div className="card">
@@ -89,6 +88,7 @@ const Payment = ({translate,setTranslate}) => {
                     </div>
                 </div>
             </div>
+            <div className="particle"></div>
         </div>
     );
 };
