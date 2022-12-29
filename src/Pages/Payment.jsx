@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, NavLink, Outlet } from 'react-router-dom';
 import { FaInfoCircle } from 'react-icons/fa';
 import { BsHandIndex } from 'react-icons/bs';
+import { ImCancelCircle } from 'react-icons/im';
 import logo from '../assets/aamarpay_logo.png';
 import logo2 from '../assets/aamarpay_logo_w.png';
 import support from '../assets/Vector.png';
@@ -15,6 +16,7 @@ const Payment = ({translate,setTranslate}) => {
             <div className='payment'>
                 <div className="card_container">
                     <div className="card">
+                        <div className="cancel"><ImCancelCircle/></div>
                         <div className="logo">
                             <div className="circle" style={{ backgroundImage: `url(${logo})` }}></div>
                         </div>

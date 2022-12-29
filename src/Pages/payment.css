@@ -70,6 +70,16 @@
 }
 .outlet{
 }
+.cancel{
+    position: absolute;
+    right:15px;
+    top:15px;
+}
+.cancel svg{
+    font-size: 2rem;
+    fill: #fd7e14;
+    cursor: pointer;
+}
 .payBtn{
     width: 100%;
     height: 60px;

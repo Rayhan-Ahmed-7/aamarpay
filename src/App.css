@@ -16,19 +16,3 @@ body{
     display: grid;
     place-items: center;
 }
-.form{
-    width: 500px;
-}
-.form input{
-    width: 100%;
-    margin-bottom:20px;
-    font-size: 20px;
-}
-.submitBtn{
-    margin-top: 10px;
-}
-@media screen and (max-width:668px){
-    .form{
-        width: 350px;
-    }
-}
