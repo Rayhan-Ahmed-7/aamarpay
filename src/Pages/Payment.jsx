@@ -3,6 +3,7 @@ import { Link, NavLink, Outlet } from 'react-router-dom';
 import { FaInfoCircle } from 'react-icons/fa';
 import { BsHandIndex } from 'react-icons/bs';
 import logo from '../assets/aamarpay_logo.png';
+import logo2 from '../assets/aamarpay_logo_w.png';
 import support from '../assets/Vector.png';
 import faq from '../assets/help.png';
 import trans from '../assets/help.png';
@@ -87,6 +88,10 @@ const Payment = ({translate,setTranslate}) => {
                         </div>
                     </div>
                 </div>
+                <footer>
+                    <img src={logo2} alt="logo" />
+                    <p>© Copyright 2022 aamarPay. All Rights Reserved by Rayhan</p>
+                </footer>
             </div>
             <div className="particle"></div>
         </div>

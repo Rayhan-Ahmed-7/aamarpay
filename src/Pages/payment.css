@@ -27,8 +27,8 @@
 }
 
 .circle {
-    width: 150px;
-    height:150px;
+    width: 130px;
+    height:130px;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -41,7 +41,7 @@
 .title h3{
     font-size: 20px;
     font-weight: 500;
-    padding:20px 0;
+    padding:20px 0 10px 0;
 }
 .infoNav{
     padding-top:20px;
@@ -85,6 +85,21 @@
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
     cursor: pointer;
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0px auto;
+    padding:20px 0px;
+}
+footer img{
+    width: 200px;
+}
+footer p{
+    color:white;
+    font-size: 1.2rem;
 }
 
 @media (min-width: 1200px) {
