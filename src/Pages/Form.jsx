@@ -1,6 +1,8 @@
 import React from 'react';
+import {useNavigate} from 'react-router-dom';
 import './form.css';
 const Details = () => {
+    const navigate = useNavigate();
     const handleSubmit = async (e) => {
         e.preventDefault();
         const user = {
@@ -8,9 +10,22 @@ const Details = () => {
             email:e.target.email.value,
             phone:e.target.number.value,
             amount:e.target.amount.value,
-            inVoiceId:"aam"+Math.ceil(Math.random()*10000000)
+            inVoiceId:"aam"+Math.ceil(Math.random()*10000000000)
         }
-        console.log(user);
+        try{
+            let res = await fetch('http://localhost:5000/user',{
+                method:'POST',
+                headers:{
+                    'Content-Type':'application/json'
+                },
+                body:JSON.stringify(user)
+            });
+            let result = await res.json();
+            navigate("/payment");
+            console.log(result);
+        }catch(err){
+            console.log(user);
+        }
     }
     return (
         <div className="container">
