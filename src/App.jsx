@@ -18,7 +18,7 @@ function App() {
             <Route index path="" element={<Support/>}/>
             <Route index path="faq" element={<Faq/>}/>
             <Route index path="details" element={<Details/>}/>
-            <Route index path="card" element={<Cards/>}/>
+            <Route index path="cards" element={<Cards/>}/>
             <Route index path="mobile-banking" element={<MobileBanking/>}/>
         </Route>
       </Routes>

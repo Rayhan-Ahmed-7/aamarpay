@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Outlet } from 'react-router-dom';
+import { Link, NavLink, Outlet } from 'react-router-dom';
 import { FaInfoCircle } from 'react-icons/fa';
 import { BsHandIndex } from 'react-icons/bs';
 import logo from '../assets/aamarpay_logo.png';
@@ -9,7 +9,6 @@ import trans from '../assets/help.png';
 import './Payment.css';
 import { useState } from 'react';
 const Payment = () => {
-
     const [translate, setTranslate] = useState(false);
     return (
         <div className="main">
@@ -18,8 +17,7 @@ const Payment = () => {
                 <div className="card_container">
                     <div className="card">
                         <div className="logo">
-                            <img src={logo} alt="" />
-                            <div className="circle" style={{ "backgroundImage": `url(${logo})` }}></div>
+                            <div className="circle" style={{ backgroundImage: `url(${logo})` }}></div>
                         </div>
                         <div className="title"><h3>aamar pay</h3></div>
                         <div className="infoNav">
@@ -42,7 +40,7 @@ const Payment = () => {
                                 </Link>
                             </div>
                             <div className="translate nav_item">
-                                <Link to="#" title='translate'>
+                                <Link to="#" title='translate' onClick={() => setTranslate(!translate)}>
                                     <div className="icon">
                                         <img src={trans} alt="" />
                                     </div>
@@ -53,20 +51,39 @@ const Payment = () => {
                             <div className="details nav_item">
                                 <Link to='/payment/details' title='Details'>
                                     <div className="icon">
-                                        {<FaInfoCircle style={{ "width": "20px", "height": "20px", "margin-bottom": "5px" }} />}
+                                        {<FaInfoCircle style={{ "width": "20px", "height": "20px", "marginBottom": "5px" }} />}
                                     </div>
                                     {!translate && <p>Details</p>}
                                     {translate && <p>বিস্তারিত</p>}
                                 </Link>
                             </div>
                         </div>
-                        <div className="paymentNav"></div>
+                        <div className="paymentNav">
+                            <div className="cards nav_item">
+                                <NavLink
+                                    to='/payment/cards'
+                                    style={({ isActive }) => isActive ? {backgroundColor:"#fd7e14"}:{backgroundColor:"#fe9900ab"}}
+                                >
+                                    {!translate && <p>Cards</p>}
+                                    {translate && <p>কার্ডস</p>}
+                                </NavLink>
+                            </div>
+                            <div className="mobileBanking nav_item">
+                                <NavLink 
+                                to='/payment/mobile-banking'
+                                style={({ isActive }) => isActive ? {backgroundColor:"#fd7e14"}:{backgroundColor:"#fe9900ab"}}
+                                >
+                                    {!translate && <p>Mobile Banking</p>}
+                                    {translate && <p>মোবাইল ব্যাংকিং</p>}
+                                </NavLink>
+                            </div>
+                        </div>
                         <div className="outlet">
-                            <Outlet/>
+                            <Outlet />
                         </div>
                         <div className="pay">
                             <button className="payBtn">
-                                <BsHandIndex/>
+                                <BsHandIndex />
                                 <span>Pay BDT 10.00</span>
                             </button>
                         </div>
