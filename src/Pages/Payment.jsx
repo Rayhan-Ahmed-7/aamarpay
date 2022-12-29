@@ -8,8 +8,7 @@ import faq from '../assets/help.png';
 import trans from '../assets/help.png';
 import './Payment.css';
 import { useState } from 'react';
-const Payment = () => {
-    const [translate, setTranslate] = useState(false);
+const Payment = ({translate,setTranslate}) => {
     return (
         <div className="main">
             <div className="particle"></div>

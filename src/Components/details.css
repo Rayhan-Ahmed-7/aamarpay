@@ -1,0 +1,14 @@
+.info{
+    padding:20px;
+    color:#212529;
+}
+.info h2{
+    padding-bottom: 15px;
+}
+.info .detail{
+    display: flex;
+    justify-content: space-between;
+    padding:10px 0;
+    font-size: 1.5rem;
+    border-top:1px solid #dee2e6;
+}
