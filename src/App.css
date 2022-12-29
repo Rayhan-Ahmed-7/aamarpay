@@ -5,12 +5,14 @@
     box-sizing: border-box;
 }
 .App{
+    
+    font-family: 'Poppins',sans-serif;
+}
+.container{
     height: 100vh;
     display: grid;
     place-items: center;
-    font-family: 'Poppins',sans-serif;
 }
-
 .form{
     width: 500px;
 }
