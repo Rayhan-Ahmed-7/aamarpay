@@ -34,16 +34,19 @@ input::-webkit-inner-spin-button {
 }
 .input_item label{
     position: absolute;
-    top:50%;
-    transform: translateY(-50%);
+    top: 50%;
     font-size: 1.5rem;
+    transform: translateY(-50%);
     color:white;
-    transition: all .3s ease-in-out;
 }
-.input_item input:focus + label,
-.input_item input:valid + label
+.input_item label span{
+    transition:transform .3s cubic-bezier(0.68,-0.54,0.265,1.55);
+    display: inline-block;
+}
+.input_item input:focus + label span,
+.input_item input:valid + label span
 {
-    top:-5px;
+    transform: translateY(-20px);
 }
 .input_btn_item{
     align-self: flex-end;
@@ -60,6 +63,7 @@ input::-webkit-inner-spin-button {
 }
 @media screen and (max-width:668px){
     .form{
-        width: 350px;
+        max-width: 400px;
+        padding:20px;
     }
 }

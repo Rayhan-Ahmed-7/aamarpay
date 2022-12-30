@@ -4,6 +4,7 @@ import './App.css';
 import Cards from './Components/Cards';
 import Details from './Components/Details';
 import Faq from './Components/Faq';
+import Intro from './Components/Intro/Intro';
 import MobileBanking from './Components/MobileBanking';
 import Support from './Components/Support';
 import Form from './Pages/Form';
@@ -13,6 +14,7 @@ function App() {
   const [translate, setTranslate] = useState(false);
   return (
     <div className="App">
+      <Intro/>
       <Routes>
         <Route path='/' element={<Form />} />
         <Route path='/payment/:id/' element={<Payment translate={translate} setTranslate={setTranslate}/>}>
