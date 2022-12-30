@@ -7,7 +7,7 @@ const useUser = (id) => {
     useEffect(()=>{
         (async ()=>{
             try{
-                let res = await fetch('http://localhost:5000/user/'+id);
+                let res = await fetch('https://aamarpay.onrender.com/user/'+id);
                 let result = await res.json();
                 setUser(result[0]);
             }catch(err){

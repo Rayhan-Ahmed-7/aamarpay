@@ -13,7 +13,7 @@ const Details = () => {
             inVoiceId:"aam"+Math.ceil(Math.random()*10000000000)
         }
         try{
-            let res = await fetch('http://localhost:5000/user',{
+            let res = await fetch('https://aamarpay.onrender.com/user',{
                 method:'POST',
                 headers:{
                     'Content-Type':'application/json'
