@@ -1,13 +1,13 @@
-import { useState } from 'react'
-import { Route, Routes } from 'react-router-dom'
-import './App.css'
-import Cards from './Components/Cards'
-import Details from './Components/Details'
-import Faq from './Components/Faq'
-import MobileBanking from './Components/MobileBanking'
-import Support from './Components/Support'
-import Form from './Pages/Form'
-import Payment from './Pages/Payment'
+import { useState } from 'react';
+import { Route, Routes } from 'react-router-dom';
+import './App.css';
+import Cards from './Components/Cards';
+import Details from './Components/Details';
+import Faq from './Components/Faq';
+import MobileBanking from './Components/MobileBanking';
+import Support from './Components/Support';
+import Form from './Pages/Form';
+import Payment from './Pages/Payment';
 
 function App() {
   const [translate, setTranslate] = useState(false);

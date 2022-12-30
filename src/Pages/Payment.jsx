@@ -9,8 +9,9 @@ import support from '../assets/Vector.png';
 import faq from '../assets/help.png';
 import trans from '../assets/help.png';
 import './Payment.css';
-import { useState } from 'react';
 import useUser from '../CustomHook/useUser';
+
+
 const Payment = ({translate,setTranslate}) => {
     const {id} = useParams();
     const [user] = useUser(id);
@@ -88,7 +89,7 @@ const Payment = ({translate,setTranslate}) => {
                         <div className="pay">
                             <button className="payBtn">
                                 <BsHandIndex />
-                                <span>Pay BDT {user.amount}</span>
+                                <span>Pay BDT {user?.amount}</span>
                             </button>
                         </div>
                     </div>

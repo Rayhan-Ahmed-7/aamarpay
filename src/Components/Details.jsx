@@ -11,15 +11,15 @@ const Details = ({translate}) => {
             {translate && <h2>লেনদেনের বিস্তারিত</h2>}
             <div className="detail">
                 <strong>Invoice To:</strong>
-                <p>{user.name}</p>
+                <p>{user?.name}</p>
             </div>
             <div className="detail">
                 <strong>Transation ID:</strong>
-                <p>{user.inVoiceId}</p>
+                <p>{user?.inVoiceId}</p>
             </div>
             <div className="detail">
                 <strong>Amount:</strong>
-                <p>BDT {user.amount}</p>
+                <p>BDT {user?.amount}</p>
             </div>
             <div className="detail">
                 <strong>Gateway Fee:</strong>
@@ -27,7 +27,7 @@ const Details = ({translate}) => {
             </div>
             <div className="detail">
                 <strong>Total Payable Amount:</strong>
-                <p>BDT {user.amount}</p>
+                <p>BDT {user?.amount}</p>
             </div>
         </div>
     );

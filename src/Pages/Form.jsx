@@ -1,10 +1,13 @@
 import React from 'react';
+import { useState } from 'react';
 import {useNavigate} from 'react-router-dom';
 import './form.css';
-const Details = () => {
+const Form = () => {
+    const [loading,setLoading] = useState(false);
     const navigate = useNavigate();
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setLoading(true);
         const user = {
             name:e.target.name.value,
             email:e.target.email.value,
@@ -21,10 +24,11 @@ const Details = () => {
                 body:JSON.stringify(user)
             });
             let result = await res.json();
+            setLoading(false);
             navigate(`/payment/${user.inVoiceId}`);
-            console.log(result);
         }catch(err){
-            console.log(user);
+            setLoading(false);
+            console.log(err);
         }
     }
     return (
@@ -56,4 +60,4 @@ const Details = () => {
     );
 };
 
-export default Details;
+export default Form;
