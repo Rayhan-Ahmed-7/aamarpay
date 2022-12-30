@@ -15,7 +15,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route path='/' element={<Form />} />
-        <Route path='/payment/' element={<Payment translate={translate} setTranslate={setTranslate}/>}>
+        <Route path='/payment/:id/' element={<Payment translate={translate} setTranslate={setTranslate}/>}>
             <Route index path="" element={<Support translate={translate} />}/>
             <Route index path="faq" element={<Faq translate={translate} />}/>
             <Route index path="details" element={<Details translate={translate} />}/>

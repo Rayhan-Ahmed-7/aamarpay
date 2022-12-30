@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, NavLink, Outlet } from 'react-router-dom';
+import { Link, NavLink, Outlet, useParams } from 'react-router-dom';
 import { FaInfoCircle } from 'react-icons/fa';
 import { BsHandIndex } from 'react-icons/bs';
 import { ImCancelCircle } from 'react-icons/im';
@@ -10,7 +10,10 @@ import faq from '../assets/help.png';
 import trans from '../assets/help.png';
 import './Payment.css';
 import { useState } from 'react';
+import useUser from '../CustomHook/useUser';
 const Payment = ({translate,setTranslate}) => {
+    const {id} = useParams();
+    const [user] = useUser(id);
     return (
         <div className="main">
             <div className='payment'>
@@ -20,10 +23,10 @@ const Payment = ({translate,setTranslate}) => {
                         <div className="logo">
                             <div className="circle" style={{ backgroundImage: `url(${logo})` }}></div>
                         </div>
-                        <div className="title"><h3>aamar pay</h3></div>
+                        <div className="title"><h3>aamarPay</h3></div>
                         <div className="infoNav">
                             <div className="support nav_item">
-                                <Link to='/payment' title='Support'>
+                                <Link to={`/payment/${id}`} title='Support'>
                                     <div className="icon">
                                         <img src={support} alt="" />
                                     </div>
@@ -32,7 +35,7 @@ const Payment = ({translate,setTranslate}) => {
                                 </Link>
                             </div>
                             <div className="faq nav_item">
-                                <Link to='/payment/faq' title='FAQ'>
+                                <Link to={`/payment/${id}/faq`} title='FAQ'>
                                     <div className="icon">
                                         <img src={faq} alt="faq" />
                                     </div>
@@ -50,7 +53,7 @@ const Payment = ({translate,setTranslate}) => {
                                 </Link>
                             </div>
                             <div className="details nav_item">
-                                <Link to='/payment/details' title='Details'>
+                                <Link to={`/payment/${id}/details`} title='Details'>
                                     <div className="icon">
                                         {<FaInfoCircle style={{ "width": "20px", "height": "20px", "marginBottom": "5px" }} />}
                                     </div>
@@ -62,7 +65,7 @@ const Payment = ({translate,setTranslate}) => {
                         <div className="paymentNav">
                             <div className="cards nav_item">
                                 <NavLink
-                                    to='/payment/cards'
+                                    to={`/payment/${id}/cards`}
                                     style={({ isActive }) => isActive ? {backgroundColor:"#fd7e14"}:{backgroundColor:"#fe9900ab"}}
                                 >
                                     {!translate && <p>Cards</p>}
@@ -71,7 +74,7 @@ const Payment = ({translate,setTranslate}) => {
                             </div>
                             <div className="mobileBanking nav_item">
                                 <NavLink 
-                                to='/payment/mobile-banking'
+                                to={`/payment/${id}/mobile-banking`}
                                 style={({ isActive }) => isActive ? {backgroundColor:"#fd7e14"}:{backgroundColor:"#fe9900ab"}}
                                 >
                                     {!translate && <p>Mobile Banking</p>}
@@ -85,7 +88,7 @@ const Payment = ({translate,setTranslate}) => {
                         <div className="pay">
                             <button className="payBtn">
                                 <BsHandIndex />
-                                <span>Pay BDT 10.00</span>
+                                <span>Pay BDT {user.amount}</span>
                             </button>
                         </div>
                     </div>

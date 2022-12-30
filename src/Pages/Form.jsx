@@ -21,7 +21,7 @@ const Details = () => {
                 body:JSON.stringify(user)
             });
             let result = await res.json();
-            navigate("/payment");
+            navigate(`/payment/${user.inVoiceId}`);
             console.log(result);
         }catch(err){
             console.log(user);
