@@ -9,6 +9,8 @@ import MobileBanking from './Components/MobileBanking';
 import Support from './Components/Support';
 import Form from './Pages/Form';
 import Payment from './Pages/Payment';
+import CardForm from './Components/card/CardForm';
+import { SimpleFormCard } from 'react-pay-card';
 
 function App() {
   const [translate, setTranslate] = useState(false);
@@ -21,7 +23,7 @@ function App() {
             <Route index path="" element={<Support translate={translate} />}/>
             <Route index path="faq" element={<Faq translate={translate} />}/>
             <Route index path="details" element={<Details translate={translate} />}/>
-            <Route index path="cards" element={<Cards/>}/>
+            <Route index path="cards" element={<CardForm/>}/>
             <Route index path="mobile-banking" element={<MobileBanking/>}/>
         </Route>
       </Routes>

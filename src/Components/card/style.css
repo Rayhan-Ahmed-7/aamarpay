@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,500,700");
+
+.no-gutters {
+  padding-left: 0;
+}
+
+.app-container {
+  font-family: "Raleway", sans-serif;
+  margin: 5% auto;
+  min-width: 300px;
+  max-width: 400px;
+}
+
+.input {
+  padding: 5px 0;
+  text-align: left;
+}
+
+.input label {
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #6e6e6e;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input input {
+  width: 100%;
+  padding: 10px 10px;
+  letter-spacing: 0px;
+  font-size: 16px;
+  background: 0;
+  border: 0;
+}
+
+.input input:focus {
+  outline: 0;
+}
+
+.input-field {
+  border: 1px solid #4e4e4e;
+  border-radius: 5px;
+  position: relative;
+}
+
+.input-field img {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-right: 5px;
+  object-fit: contain
+}
+
+/* Removes form Controls  */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+input[type="month"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  display: none;
+}
+
+input[type="month"]::-webkit-calendar-picker-indicator {
+  -webkit-appearance: none;
+  display: none;
+}
+
+.row {
+  display: flex;
+  gap: 20px;
+}
+
+.col {
+  flex-basis: 100%;
+  flex-grow: 1;
+}
