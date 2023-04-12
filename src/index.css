@@ -1,7 +1,8 @@
 html{
     font-size: 62.5%;
-    --font-color:#3e3f40;
+    --font-color:#626262;
     --link-color:#0000EE;
+    --border-color:#d3d3d3;
 }
 a{
     text-decoration: none;

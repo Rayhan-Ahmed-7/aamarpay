@@ -6,12 +6,13 @@ import qcash from '../assets/qcash.png';
 import './cards.css';
 import CardForm from './card/CardForm';
 import { translateContext } from '../App';
+import NumberVerify from './NumberVerify/NumberVerify';
 const Cards = () => {
     const translate = useContext(translateContext);
     const [seeOthers, setSeeOthers] = useState(false)
     return (
         <>
-            <p className='other_cards' onClick={()=>setSeeOthers(!seeOthers)}>{translate ? 'অন্য কার্ড সমূহ':'see other cards'}</p>
+            {/* <p className='other_cards' onClick={()=>setSeeOthers(!seeOthers)}>{translate ? 'অন্য কার্ড সমূহ':'see other cards'}</p>
             {
                 seeOthers ?
                     <div className='allCards'>
@@ -22,7 +23,8 @@ const Cards = () => {
                     </div>
                     :
                     <CardForm />
-            }
+            } */}
+            <NumberVerify/>
         </>
     );
 };

@@ -24,9 +24,6 @@ const cards = {
 // let visaRegex = /^4[0-9]{12}(?:[0-9]{3})?$/
 // let dinersclubRegex = /^3(?:0[0-5]|[68][0-9])[0-9]{11}$/
 
-// month and day
-
-
 const CreditCardForm = () => {
   const translate = useContext(translateContext);
   const [cardNumber, setCardNumber] = useState('');
@@ -141,7 +138,6 @@ const CreditCardForm = () => {
       <div className="checkout">
         <div className="checkout-container">
           <div className="input">
-            {/* <label>Card Number</label> */}
             <div className="input-field">
               <input
                 onFocus={(e) => e.target.parentElement.style.border = "1px solid #354efd"}
@@ -156,7 +152,6 @@ const CreditCardForm = () => {
           <div className="row">
             <div className="col">
               <div className="input">
-                {/* <label>Expiration Date</label> */}
                 <div className="input-field">
                   <input
                     onFocus={(e) => e.target.parentElement.style.border = "1px solid #354efd"}
@@ -171,7 +166,6 @@ const CreditCardForm = () => {
             </div>
             <div className="col">
               <div className="input">
-                {/* <label>CVC/CVV</label> */}
                 <div className="input-field">
                   <input
                     onFocus={(e) => e.target.parentElement.style.border = "1px solid #354efd"}
@@ -179,6 +173,7 @@ const CreditCardForm = () => {
                     type="tel"
                     name="cvc"
                     placeholder={translate ? 'সিভিসি/সিভিভি' : 'CVC/CVV'}
+                    maxLength="4"
                   />
                   <img src={cvc} />
                 </div>
@@ -186,7 +181,6 @@ const CreditCardForm = () => {
             </div>
           </div>
           <div className="input">
-            {/* <label>{props.label}</label> */}
             <div className="input-field">
               <input
                 onFocus={(e) => e.target.parentElement.style.border = "1px solid #354efd"}
@@ -239,9 +233,5 @@ const CreditCardForm = () => {
 }
 
 export default CreditCardForm;
-
-const Button = (props) => (
-  <button className="checkout-btn" type="button">{props.text}</button>
-);
 
 
