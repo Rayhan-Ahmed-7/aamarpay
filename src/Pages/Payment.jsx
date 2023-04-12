@@ -33,7 +33,9 @@ const Payment = ({ translate, setTranslate }) => {
                     <div className="card">
                         <div className="cancel"><ImCancelCircle /></div>
                         <div className="logo">
-                            <div className="circle" style={{ backgroundImage: `url(${logo})` }}></div>
+                            <div className="client_image">
+                                <img src={logo} alt="logo" />
+                            </div>
                         </div>
                         <div className="title"><h3>aamarPay</h3></div>
                         <div className="infoNav">

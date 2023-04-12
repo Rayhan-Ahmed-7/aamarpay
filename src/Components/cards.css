@@ -1,3 +1,11 @@
+.other_cards{
+    padding-top: 12px;
+    padding-right: 12px;
+    font-size: 1.4rem;
+    text-align: right;
+    color:var(--link-color);
+    cursor: pointer;
+}
 .allCards{
     display:flex;
     flex-wrap: wrap;

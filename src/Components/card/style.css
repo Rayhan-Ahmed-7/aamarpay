@@ -1,12 +1,13 @@
-@import url("https://fonts.googleapis.com/css?family=Raleway:400,500,700");
-
 .no-gutters {
   padding-left: 0;
 }
 
 .app-container {
-  font-family: "Raleway", sans-serif;
-  margin: 5% auto;
+  /* font-family: "Raleway", sans-serif; */
+  margin: 1% auto;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-bottom: 12px;
   min-width: 300px;
   max-width: 400px;
 }
@@ -27,23 +28,23 @@
 
 .input input {
   width: 100%;
-  padding: 10px 10px;
+  padding: 11px 12px;
   letter-spacing: 0px;
-  font-size: 16px;
+  font-size: 15px;
+  height: 40px;
   background: 0;
   border: 0;
 }
 
-.input input:focus {
-  outline: 0;
-}
-
 .input-field {
-  border: 1px solid #4e4e4e;
-  border-radius: 5px;
+  border: 1px solid #aaaaaa;
+  /* color:#2957ff; */
+  border-radius: 2px;
   position: relative;
 }
-
+.input input:focus{
+  outline: 0;
+}
 .input-field img {
   width: 25px;
   height: 25px;
@@ -82,4 +83,71 @@ input[type="month"]::-webkit-calendar-picker-indicator {
 .col {
   flex-basis: 100%;
   flex-grow: 1;
+}
+.save_card{
+  border: 1px solid hsla(240,1%,49%,.25);
+  padding: 4px 10px;
+  border-radius: 2px;
+  background: rgba(128,128,128,.07);
+  margin-top: 4px;
+}
+.save_card .top{
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #d5d5d5;
+}
+.checkbox{
+  flex-basis: 80%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 13px;
+  vertical-align: middle;
+}
+.checkbox input{
+  margin-right: 4px;
+}
+.save_card .right{
+  flex-basis: 20%;
+  position: relative;
+  display: flex;
+  justify-content: end;
+}
+.remember_icon{
+  cursor: pointer;
+}
+.separate_line{
+  height: 19px;
+  margin-right: 6px;
+  width:1px;
+  background-color: #838383;
+  display: inline-block;
+}
+.popup_content{
+  position: absolute;
+  right: 26px;
+  top:-30px;
+  width:240px;
+  background-color: rgb(255, 255, 255);
+  color:#101010;
+  box-shadow:0 1px 2px rgba(0,0,0.15);
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1.3rem;
+  text-align: left;
+}
+.popup_content img{
+  height: 18px;
+  vertical-align: middle;
+  margin:0px 4px;
+}
+
+.terms_condition{
+  font-size:1.3rem;
+  color:var(--font-color);
+  padding-top: 4px;
+}
+.terms_condition a,
+.popup_content a{
+  color:var(--link-color);
 }
